@@ -1,0 +1,9 @@
+package chapter1;
+import java.lang.*;
+
+public class Name 
+{
+	private String first; // first name
+	private String second; // second name
+
+}

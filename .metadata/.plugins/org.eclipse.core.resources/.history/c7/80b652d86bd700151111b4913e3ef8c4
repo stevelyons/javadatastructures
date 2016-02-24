@@ -1,0 +1,42 @@
+package project1;
+
+public class Counter
+{
+	private int count;
+	
+	Counter()
+	{
+	} // end of constructor
+	
+	Counter(int count)
+	{
+		this.count = count;
+	} // end of constructor
+	
+	void setCount(int number)
+	{
+		this.count = number;
+	} // end of setCount
+	
+	void incrementCount()
+	{
+		(this.count)++;
+	} // end of incrementCount
+	
+	void decrementCount()
+	{
+		(this.count)--;
+	} // end of decrementCount
+	
+	int getCount()
+	{
+		return this.count;
+	} // end of getCount
+	
+	public String toString()
+	{
+		return this.count; 
+	} // end of toString
+	
+	
+} // end of Counter

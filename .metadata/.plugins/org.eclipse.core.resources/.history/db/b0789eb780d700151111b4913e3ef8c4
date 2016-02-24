@@ -1,0 +1,21 @@
+package project1;
+
+public enum Rank 
+{
+	
+	ACE("notface", 1), TWO("notface",2), THREE("notface", 3), FOUR("notface", 4), FIVE("notface", 5), SIX("notface", 6), SEVEN("notface", 7), EIGHT("notface", 8), NINE("notface", 9), TEN("notface", 10), JACK("face", 11), QUEEN("face", 12), KING("face", 13);
+	
+	private final boolean isFace; 
+	private final int value;
+	
+	private Rank(int value, boolean isFace)
+	{
+		this.value = value;
+		this.isFace = isFace;
+	} // end of constructor
+	
+	public int getValue()
+	{
+		return this.value;
+	} // end of getValue
+} // end of Rank

@@ -1,0 +1,60 @@
+package chapter1;
+import java.lang.*;
+
+public class Name 
+{
+	private String first; // first name
+	private String last; // second name
+	
+	// constructor
+	public Name()
+	{
+	} // end of constructor
+	
+	public Name(String firstName , String lastName)
+	{
+		first = firstName;
+		last = lastName; 
+	} // end of constructor
+	
+	public void setName(String firstName, String lastName)
+	{
+		setFirst(firstName);
+		setLast(lastName);
+	} // end of setName
+	
+	public String getName()
+	{
+		return toString();
+	} // end of getName
+	
+	public void setFirst(String firstName)
+	{
+		this.first = firstName;
+	} // end of setFirst
+	
+	public void setLast(String lastName)
+	{
+		this.last = lastName;
+	} // end of setLast
+	
+	public String getFirst()
+	{
+		return this.first;
+	} // end of getFirst
+	
+	public String getLast()
+	{
+		return this.last;
+	} // end of getLast
+	
+	public void giveLastNameTo(Name aName)
+	{
+		aName.setLast(last);
+	} // end of giveLastNameTo()
+	
+	public String toString()
+	{
+		return first + " " + last;
+	} // end of toString
+} // end of Name
