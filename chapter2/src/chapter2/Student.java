@@ -14,6 +14,12 @@ public class Student
 		address = "";
 	} // end of constructor
 	
+	public Student(Name studentName, String studentId)
+	{
+		this.fullName = studentName;
+		this.id = studentId;
+	} // end of constructor
+	
 	public Student(Name studentName, String studentId, String studentAddress)
 	{
 		this.fullName = studentName;
@@ -63,4 +69,21 @@ public class Student
 	{
 		return this.address;
 	} // end of getAddress()
+	
+	// adding abstract method display
+	public void display()
+	{
+		
+	}
+	
+	/** Task: Displays hte object after skipping 
+	 * 		  number of lines. */
+	 public void displayAt(int numberOfLines)
+	 {
+		 for (int count = 0; count < numberOfLines; count++)
+		 {
+			 System.out.println();
+		 }
+		 display();
+	 } // end displayAt
 } // end of Student

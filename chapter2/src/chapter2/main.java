@@ -31,5 +31,38 @@ public class main {
 		couple.changeOrder();
 		System.out.println(couple);
 		
+		// testing class Pair
+		Name joe = new Name("Joe", "Jave");
+		String joePhone = "(401) 555-1234";
+		Pair<Name, String> joeEntry = new Pair<Name, String>(joe, joePhone);
+		System.out.println(joeEntry);	
+		
+		// testing NickName
+		Name robert = new Name();
+		robert.setFirst("Robert");
+		
+		NickName bob = new NickName();
+		bob.setNickName("Bobby");
+		bob.toString();
+		
+		// testing undergrad and college student
+		Student amy = new CollegeStudent();
+		Student brad1 = new UndergradStudent();
+		CollegeStudent jess = new UndergradStudent();
+		
+		// create Name instance for brad
+		Name brad2 = new Name();
+		brad2.setName("Brad", "Peters");
+		brad1.setStudent(brad2, "12354", "123 Main Street");
+		
+		System.out.println(brad1.toString());
+		
+		// testing undergrad again
+		UndergradStudent ug = new UndergradStudent();
+		System.out.println("this is ug");
+		ug.displayAt(2);
+		Student s = ug;
+		System.out.println("this is s");
+		s.displayAt(3);	
 	} // end of main
 } // end of main

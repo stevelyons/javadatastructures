@@ -1,0 +1,28 @@
+package chapter2;
+
+public class CollegeStudent extends Student
+{
+	private int year; 		// year of graduation
+	private String degree;  // degree sought
+	
+	public CollegeStudent()
+	{
+		super(); 
+		year = 0;
+		degree = "";
+	}
+	
+	public CollegeStudent(Name studentName, String studentId, int graduationYear, String degreeSought)
+	{
+		super(studentName, studentId);
+		year = graduationYear;
+		degree = degreeSought;
+	} // end constructor
+	
+	public void setStudent(Name studentname, String studentId, int graduationYear, String degreeSought)
+	{
+		setName(studentname);
+		setId(studentId);
+	}
+
+}
