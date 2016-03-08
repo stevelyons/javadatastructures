@@ -1,7 +1,0 @@
-package chapter2;
-
-public class Student 
-{
-	private Name fullName;
-	private String id;
-} // end of student
