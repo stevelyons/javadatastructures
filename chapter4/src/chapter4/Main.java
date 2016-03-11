@@ -9,6 +9,7 @@ public class Main
 	
 	public static void testList()
 	{
+		//ListInterface<String> runnerList = new AList<String>();
 		ListInterface<String> runnerList = new AList<String>();
 		
 		runnerList.add("16");
