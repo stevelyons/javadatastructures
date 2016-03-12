@@ -20,7 +20,7 @@ public class AList<T> implements ListInterface<T>
 	@Override
 	public boolean add(T newEntry) {
 		// TODO Auto-generated method stub
-		return true;
+		return false;
 	}
 
 	@Override
