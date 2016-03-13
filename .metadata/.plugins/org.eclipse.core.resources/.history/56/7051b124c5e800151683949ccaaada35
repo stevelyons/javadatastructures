@@ -82,43 +82,19 @@ public class AList<T> implements ListInterface<T>
 	@Override
 	public boolean replace(int givenPosition, T newEntry) 
 	{
-		boolean isSuccessful = true;
-		
-		if ((givenPosition >= 1) && (givenPosition <= length))
-		{
-			assert !isEmpty();
-			list[givenPosition - 1] = newEntry;
-		}
-		else
-			isSuccessful = false;
-		
-		return isSuccessful;
+		return false;
 	} // end of replace
 
 	@Override
 	public T getEntry(int givenPosition) 
 	{
-		T result = null;
-		
-		if ((givenPosition >= 1) && (givenPosition <= length))
-		{
-			assert !isEmpty();
-			result = list[givenPosition -1];
-		} // end of if
-		return result;
+		return null;
 	} // end of getEntry
 	
 	@Override
 	public boolean contains(T anEntry)
 	{
-		boolean found = false;
-		
-		for (int index = 0; !found && (index < length); index++)
-		{
-			if (anEntry.equals(list[index]))
-				found = true;
-		} // end of if 
-		return found;
+		return false;
 	} // end of contains
 
 	@Override

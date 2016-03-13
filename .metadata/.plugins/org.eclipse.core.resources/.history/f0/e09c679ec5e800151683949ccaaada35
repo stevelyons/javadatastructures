@@ -111,14 +111,7 @@ public class AList<T> implements ListInterface<T>
 	@Override
 	public boolean contains(T anEntry)
 	{
-		boolean found = false;
-		
-		for (int index = 0; !found && (index < length); index++)
-		{
-			if (anEntry.equals(list[index]))
-				found = true;
-		} // end of if 
-		return found;
+		return false;
 	} // end of contains
 
 	@Override

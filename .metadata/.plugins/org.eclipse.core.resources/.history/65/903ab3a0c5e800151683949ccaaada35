@@ -116,7 +116,7 @@ public class AList<T> implements ListInterface<T>
 		for (int index = 0; !found && (index < length); index++)
 		{
 			if (anEntry.equals(list[index]))
-				found = true;
+					found = true;
 		} // end of if 
 		return found;
 	} // end of contains

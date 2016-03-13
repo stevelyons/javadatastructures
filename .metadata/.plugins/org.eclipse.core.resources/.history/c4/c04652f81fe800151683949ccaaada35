@@ -54,23 +54,9 @@ public class AList<T> implements ListInterface<T>
 	} // end of add
 
 	@Override
-	public T remove(int givenPosition) 
-	{
-		T result = null; // return value
-		
-		if ((givenPosition >= 1) && (givenPosition <= length))
-		{
-			assert !isEmpty();
-			result = list[givenPosition - 1]; // get entry to be removed
-			
-			// move subsequent entries toward entry to be removed, 
-			// unless it is last in list
-			if (givenPosition < length)
-				removeGap(givenPosition);
-			
-			length--;
-		} // end if statement
-		return result;
+	public T remove(int givenPosition) {
+		// TODO Auto-generated method stub
+		return null;
 	} // end of remove
 
 	@Override
@@ -82,43 +68,19 @@ public class AList<T> implements ListInterface<T>
 	@Override
 	public boolean replace(int givenPosition, T newEntry) 
 	{
-		boolean isSuccessful = true;
-		
-		if ((givenPosition >= 1) && (givenPosition <= length))
-		{
-			assert !isEmpty();
-			list[givenPosition - 1] = newEntry;
-		}
-		else
-			isSuccessful = false;
-		
-		return isSuccessful;
+		return false;
 	} // end of replace
 
 	@Override
 	public T getEntry(int givenPosition) 
 	{
-		T result = null;
-		
-		if ((givenPosition >= 1) && (givenPosition <= length))
-		{
-			assert !isEmpty();
-			result = list[givenPosition -1];
-		} // end of if
-		return result;
+		return null;
 	} // end of getEntry
 	
 	@Override
 	public boolean contains(T anEntry)
 	{
-		boolean found = false;
-		
-		for (int index = 0; !found && (index < length); index++)
-		{
-			if (anEntry.equals(list[index]))
-				found = true;
-		} // end of if 
-		return found;
+		return false;
 	} // end of contains
 
 	@Override
@@ -157,14 +119,4 @@ public class AList<T> implements ListInterface<T>
 		for (int index = lastIndex; index >= newIndex; index--)
 			list[index + 1] = list[index];
 	} // end makeRoom
-	
-	private void removeGap(int givenPosition)
-	{
-		assert (givenPosition >= 1) && (givenPosition < length);
-		
-		int removedIndex = givenPosition - 1;
-		int lastIndex = length - 1;
-		for (int index = removedIndex; index < lastIndex; index++)
-			list[index] = list[index - 1];
-	} // end of removeGap
 } // end of AList

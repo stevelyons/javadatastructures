@@ -1,0 +1,86 @@
+package chapter5;
+
+public class AList<T> implements ListInterface<T>
+{
+	private T[] list; // array of list entries
+	private int length; // current number of entries in list
+	
+	private static final int MAX_SIZE = 50;
+	public AList()
+	{
+		this(MAX_SIZE);
+	} // end of default
+	
+	public AList(int maxSize)
+	{
+		length = 0;
+		list = (T[]) new Object[maxSize];
+	} // end of constructor
+
+	@Override
+	public boolean add(T newEntry) {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean add(int newPosition, T newEntry) {
+		// TODO Auto-generated method stub
+		return false;
+	} // end of add
+
+	@Override
+	public T remove(int givenPosition) {
+		// TODO Auto-generated method stub
+		return null;
+	} // end of remove
+
+	@Override
+	public void clear() 
+	{
+		length = 0;
+	} // end of clear
+
+	@Override
+	public boolean replace(int givenPosition, T newEntry) 
+	{
+		return false;
+	} // end of replace
+
+	@Override
+	public T getEntry(int givenPosition) 
+	{
+		return null;
+	} // end of getEntry
+	
+	@Override
+	public boolean contains(T anEntry)
+	{
+		return false;
+	} // end of contains
+
+	@Override
+	public int getLength() 
+	{
+		return length;
+	} // end of getLength
+
+	@Override
+	public boolean isEmpty() 
+	{
+		return length == 0; // 
+	} // end of isEmpty
+
+	@Override
+	public boolean isFull()
+	{
+		return length == list.length;
+	} // end of isFull
+
+	@Override
+	public void display() 
+	{
+		for (int index = 0; index < length; index++)
+			System.out.println(list[index]);
+	} // end of display
+} // end of AList
