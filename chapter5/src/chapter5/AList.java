@@ -1,6 +1,6 @@
 package chapter5;
 
-public class AList<T> implements ListInterface<T>
+public class AList<T> implements ListInterface<T>, java.io.Serializable 
 {
 	private T[] list; // array of list entries
 	private int length; // current number of entries in list
@@ -20,6 +20,15 @@ public class AList<T> implements ListInterface<T>
 	@Override
 	public boolean add(T newEntry) 
 	{
+		if (isFull()) // 	if (isArrayFull()) 
+			doubleArray();
+		
+		// add new entry after last current entry
+		list[length] = newEntry;
+		length++;
+		
+		return true;
+		/*
 		boolean isSuccessful = true;
 		
 		if (!isFull())
@@ -34,6 +43,7 @@ public class AList<T> implements ListInterface<T>
 			isSuccessful = false;
 		
 		return isSuccessful;
+		*/
 	}
 
 	@Override
@@ -167,4 +177,22 @@ public class AList<T> implements ListInterface<T>
 		for (int index = removedIndex; index < lastIndex; index++)
 			list[index] = list[index - 1];
 	} // end of removeGap
+	
+	public static void arrayCopy(Object fromArray, int fromIndex, Object toArray, int toIndex, int count)
+	{
+		
+	} // end of arrayCopy
+	
+	/** Task Double the size of the array of list entries. */
+	private void doubleArray()
+	{
+		T[] oldList = list;
+		int oldSize = oldList.length;
+		
+		list = (T[]) new Object[2 * oldSize];
+		
+		// copy entries from old array to new, bigger array
+		for (int index = 0; index < oldSize; index++)
+			list[index] =  oldList[index];
+	}
 } // end of AList
