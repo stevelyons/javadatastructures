@@ -17,7 +17,7 @@ public class LList <T> implements ListInterface<T>
 	} // end clear
 	
 	
-	priate Node getNodeAt(int givenPosition)
+	private Node getNodeAt(int givenPosition)
 	{
 		
 	} // end of getNodeAt
@@ -26,4 +26,64 @@ public class LList <T> implements ListInterface<T>
 	{
 		
 	} // end of Node
+
+	@Override
+	public boolean add(T newEntry) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean add(int newPosition, T newEntry) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public T remove(int givenPosition) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean replace(int givenPosition, T newEntry) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public T getEntry(int givenPosition) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean contains(T anEntry) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int getLength() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isFull() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+		
+	}
 } // end of LList
